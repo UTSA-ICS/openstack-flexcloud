@@ -16,20 +16,19 @@ Create the 'stack' user and update it in the sudoers file
  	sudo echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
  	sudo sed -i "s/^PasswordAuthentication.*/PasswordAuthentication yes/" /etc/ssh/sshd_config
  	sudo service ssh restart
-	exit
 
 Install git and exit the server
 ::
-  sudo apt-get install -qqy git
+  	sudo apt-get install -qqy git
 	exit
 
 Now Log in as 'stack', download devstack code and then start 'stack.sh' script.
 ::
-  ssh stack@$server_ip
-  sudo mkdir /opt/stack
-  sudo chown stack.stack /opt/stack
-  cd /opt/stack
-  git clone https://github.com/UTSA-ICS/devstack-ics.git
+  	ssh stack@$server_ip
+  	sudo mkdir /opt/stack
+  	sudo chown stack.stack /opt/stack
+  	cd /opt/stack
+	git clone https://github.com/UTSA-ICS/devstack-ics.git
 	cd devstack
 	./stack.sh
 

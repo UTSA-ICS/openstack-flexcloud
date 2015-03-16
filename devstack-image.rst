@@ -29,6 +29,7 @@ Now Log in as 'stack', download devstack code and then start 'stack.sh' script.
   	sudo chown stack.stack /opt/stack
   	cd /opt/stack
 	git clone https://github.com/UTSA-ICS/devstack-ics.git .
+	chmod -R 644 *
 	cd devstack
 	
 	sudo easy_install pip

@@ -28,7 +28,7 @@ Now Log in as 'stack', download devstack code and then start 'stack.sh' script.
   	sudo mkdir /opt/stack
   	sudo chown stack.stack /opt/stack
   	cd /opt/stack
-	git clone https://github.com/UTSA-ICS/devstack-ics.git
+	git clone https://github.com/UTSA-ICS/devstack-ics.git .
 	cd devstack
 	./stack.sh
 

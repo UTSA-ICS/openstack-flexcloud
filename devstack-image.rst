@@ -29,14 +29,10 @@ Now Log in as 'stack', download devstack code and then start 'stack.sh' script.
   	sudo chown stack.stack /opt/stack
   	cd /opt/stack
 	git clone https://github.com/UTSA-ICS/devstack-ics.git .
-	chmod -R 644 *
+	sudo chmod -R 744 *
 	cd devstack
-	
-	sudo easy_install pip
-	sudo easy_install --upgrade pip
-	sudo rm /usr/lib/python2.7/dist-packages/setuptools.egg-info
 	sudo apt-get install --reinstall python-setuptools
-	
+	sudo easy_install --upgrade pip
 	./stack.sh
 
 Ensure that there are no errors and this pases successfully. 
